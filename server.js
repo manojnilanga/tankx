@@ -69,7 +69,7 @@ io.on('connection', function (socket) {
 });
 
 /* express.set( 'port', ( process.env.PORT || 5000 )); */
-const port = process.env.PORT || 8000;
+var port = process.env.PORT || 8000;
 
 server.listen(/* express.get( 'port' ) */ port, function () {
   console.log(`Listening on ${server.address().port}`);
