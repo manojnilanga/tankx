@@ -68,8 +68,9 @@ io.on('connection', function (socket) {
   });
 });
 
-express.set( 'port', ( process.env.PORT || 5000 ));
+/* express.set( 'port', ( process.env.PORT || 5000 )); */
+var port = process.env.PORT || 8000;
 
-server.listen(express.get( 'port' ), function () {
+server.listen(/* express.get( 'port' ) */ port, function () {
   console.log(`Listening on ${server.address().port}`);
 });
